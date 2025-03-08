@@ -135,7 +135,7 @@ img {
 }
 
 summary:hover {
-    background-color: #11ADC1FF;
-    background-size:min-content;
+    color: #11ADC1FF;
+    text-decoration: underline;
 }
 
