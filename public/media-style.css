@@ -136,6 +136,6 @@ img {
 
 summary:hover {
     background-color: #11ADC1FF;
-    width:min-content;
+    background-size:min-content;
 }
 
