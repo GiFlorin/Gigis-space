@@ -7,7 +7,7 @@ body {
 
 @font-face {
     font-family: 'title'; /*a name to be used later*/
-    src: url("vergilia.otf"); /*URL to font*/
+    src: url("vergilia.ttf"); /*URL to font*/
 }
 
 h1 {
