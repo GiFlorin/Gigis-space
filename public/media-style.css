@@ -134,3 +134,7 @@ img {
     height: 2.5em;
 }
 
+summary:hover {
+    background-color: #11ADC1FF;
+}
+
