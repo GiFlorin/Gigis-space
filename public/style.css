@@ -47,14 +47,19 @@ p {
   position: relative
 }
 
+@font-face {
+  font-family: 'title'; /*a name to be used later*/
+  src: url("Retrogression-Regular.ttf"); /*URL to font*/
+}
+
 h1 {
-  font-family: "Courier New", monospace;
-  color: #EF476F;
+  font-family: "title";
+  color: whitesmoke;
   width: 30%;
   text-align: center;
-  background:#F8FFE5;
   position: absolute;
-  left: 33%
+  left: 33%;
+  font-size: 3.5em;
 }
 
 h2 {
