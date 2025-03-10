@@ -1,0 +1,42 @@
+
+
+body {
+    background: #1E8875FF;
+    padding: 10px;
+}
+
+@font-face {
+    font-family: 'title'; /*a name to be used later*/
+    src: url("Retrogression-Regular.ttf"); /*URL to font*/
+}
+
+h2 {
+    font-family: 'title';
+    color: white;
+    text-align: center;
+    font-size: 5em;
+}
+
+.container {
+    float: left;
+    width: 50%;
+}
+
+.outer {
+    background: #CB4D68FF;
+    border-radius: .7em;
+    border: #6A3771FF solid 10px;
+    height: 100vh;
+}
+
+.books {
+    
+}
+
+.bookspine {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    background: #393457FF;
+    width: 4em;
+    transform: rotate(90deg);
+}

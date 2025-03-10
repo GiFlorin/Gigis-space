@@ -1,0 +1,18 @@
+Colors:
+white = #FFFFFFFF
+cyan = #6DF7C1FF
+blue = #11ADC1FF
+blue-grey = #606C81FF
+darkblue = #393457FF
+Darkgreen = #1E8875FF
+green = #5BB361FF
+lightgreen = #A1E55AFF
+black = #1F1B31FF
+yellow = #F7E476FF
+orange = #F99252FF
+redpink = #CB4D68FF
+purple = #6A3771FF
+pinkchock = #C92464FF
+babypink = #F48CB6FF
+salmon = #F7B69EFF
+greengrey = #9B9C82FF 
