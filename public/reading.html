@@ -8,18 +8,74 @@
     <body>
         <div class="right container">
         <h2>On the shelf...</h2>
+        <p id="mensagemPadrao">Click on a book to see the best stuff!</p>
+        <div class="descriptionbox" id="book1">
+            <h4><b>Title</b></h4>
+            <span class="extra">
+                <i class="type">Movie</i>
+                ✧ 
+                <i class="genre">Documentary, Biography</i>
+                <span class="rating">★★★★</span>
+            </span>
+            <img class="bookcover" src="">
+            <p class="summary"><i>Resumo</i></p>
+            <q> quotes </q>
+            <p class="review">Review</p>
+            
+        </div>
         </div>
         <div class="left container">
             <div class="outer">
                 <div class="Shelfcontainer">
                     <div class="books">
-                        <p class="bookspine">book 1</p>
+                        <p class="clickable bookspine tall green" onclick="mostrarTexto('book1')">book 1</p>
+                        <p class="bookspine fat">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
                         <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
+                        <p class="bookspine">book 2</p>
+                        <p class="bookspine tall green">book 1</p>
                     </div>
                     <div class="shelf"></div>
                 </div>
             </div>
         </div>
+<!-- <div class="botao" onclick="mostrarTexto('texto3')">Botão 3</div>
+        <p id="texto3" class="texto">Texto referente ao Botão 3.</p> --->
+
+        <script>
+            function mostrarTexto(id) {
+                var textos = document.querySelectorAll('.texto');
+                var algumVisivel = false;
+                
+                textos.forEach(function(texto) {
+                    if (texto.id !== id) {
+                        texto.style.display = "none";
+                    }
+                });
+                
+                var textoSelecionado = document.getElementById(id);
+                if (textoSelecionado.style.display === "block") {
+                    textoSelecionado.style.display = "none";
+                } else {
+                    textoSelecionado.style.display = "block";
+                    algumVisivel = true;
+                }
+                
+                document.getElementById("mensagemPadrao").style.display = algumVisivel ? "none" : "block";
+            }
+        </script>
         <div class="floor"></div>
     </body>
 </html>
