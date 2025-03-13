@@ -25,10 +25,6 @@ h4 {
     font-size: 2em;
 }
 
-.extra {
-    color:#F48CB6FF;
-}
-
 .container {
     float: left;
     width: 50%;
@@ -54,14 +50,16 @@ h4 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     background: #393457FF;
-    height: 6em;
+    height: 7.6em;
+    min-width: fit-content;
     width: 1.5em;
-    padding: 5px;
+    padding: 10px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     margin-left: 2px;
     margin-right: 2px;
     cursor: pointer;
+    border-radius: .3em;
 }
 
 .bookspine:hover {
@@ -72,16 +70,16 @@ h4 {
     width: 2.2em;
 }
 
-.small{
-    height: 3.5em;
-}
-
 .medium {
-    height: 5em;
+    height: 7.5em;
 }
 
 .tall {
-    height: 7.5em;
+    height: 9em;
+}
+
+.short {
+    height: 6em;
 }
 
 .darkgreen {
@@ -104,6 +102,33 @@ h4 {
     background: #393457FF;
 }
 
+.orange {
+    background: #F99252FF;
+}
+
+.blue {
+    background: #11ADC1FF;
+}
+
+.yellow {
+    background: #F7E476FF;
+    color: #F99252FF;
+}
+
+.black {
+    background: #1F1B31FF;
+}
+
+.babypink {
+    background: #F48CB6FF;
+}
+
+.bookcover {
+    display: inline;
+    height: 14em;
+    box-shadow: 3.3px 6.6px 6.6px #5117249e;
+}
+
 .shelf {
     background: #6A3771FF;
     width: 100%;
@@ -113,4 +138,13 @@ h4 {
 .descriptionbox {
     display: none;
     text-align: center;
+    margin:10px;
+    background: #5BB361FF;
+
 }
+
+.date {
+    background: #F99252FF;
+}
+
+
