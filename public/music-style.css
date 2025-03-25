@@ -51,11 +51,10 @@ h4 {
 }
 
 .right-side {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display:flex;
     float:left;
     width: 30%;
+    height: 100%;
 }
 
 .turntable {
@@ -162,17 +161,23 @@ h4 {
     backdrop-filter: blur(7px) grayscale(100%);
     border-radius:20px;
     text-align: center;
+    align-items: center;
 }
 
 .album-title {
     font-family: 'konkhmer';
     color: #F99252FF;
     filter: none;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    filter: drop-shadow(6px 6px 10px #1F1B31FF);
 }
 
-/*.album-cover:hover {
-    filter: grayscale(100%);
-}*/
+i {
+    color: #F99252FF;
+    margin-top: 0px;
+}
+
 
 .album-cover:hover > .overlay{
     display: block;
@@ -196,6 +201,47 @@ h4 {
 }
 
 .listen-button {
-    background: white;
+    /*background: rgba(249, 146, 82, 0.497);*/
+    width: fit-content;
+    margin: auto;
+    border: #CB4D68FF solid 2px;
+    padding: 5px;
+    color: #CB4D68FF;
+    border-radius: 10px;
+    margin-top: 1em;
+    display: inline-block;
+    text-decoration:none;
+    filter: drop-shadow(6px 6px 10px #1F1B31FF);
+}
 
+.listen-button:hover {
+    background: rgba(255, 255, 255, 0.337);
+}
+
+.album-player {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 70vh;
+    padding: 10px;
+    background: #F99252FF;
+    border-radius: 20px;
+    margin: auto;
+    filter: drop-shadow(6px 6px 10px #1F1B31FF);
+}
+
+.player {
+    display: none;
+}
+
+#PlaceHolder {
+    margin:10px;
+    padding: 20px;
+    color: white;
+}
+
+.highlight {
+    background: #1E8875FF;
 }

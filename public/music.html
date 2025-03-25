@@ -24,8 +24,50 @@
                 </div>
             </div>
             <div class="right-side">
-                <div class="album-cover links"></div>
-                <div class="album-cover"></div>
+                <div class="album-player">
+                    <div id="PlaceHolder">
+                        <h4>Welcome!</h4>
+                        <p>Music has always been more than just sound—it's a feeling, a memory, a moment suspended in time.
+                             This space is my personal collection of melodies that have shaped my world, from timeless classics 
+                             to pop cheeky songs. Like the soft crackle of a needle on vinyl, each song carries a story waiting to be felt.</p>
+                        <span class="highlight">Click on an album, drop the needle, and let the music play!</span>
+                    </div>
+                    <iframe class="player" id="BrothersInArms" style="border-radius:12px" src="https://open.spotify.com/embed/album/7jvcSnCnugLcisBCNBm60s?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="TheStranger" style="border-radius:12px" src="https://open.spotify.com/embed/album/3IILMjMMnoN2sKzgesX8KV?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="WhiteAlbum" style="border-radius:12px" src="https://open.spotify.com/embed/album/1klALx0u4AavZNEvC4LrTL?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="TheDarkSideOfTheMoon" style="border-radius:12px" src="https://open.spotify.com/embed/album/4LH4d3cOWNNsVw41Gqt2kv?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="TracyChapman" style="border-radius:12px" src="https://open.spotify.com/embed/album/6hmmX5UP4rIvOpGSaPerV8?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="MidnightMemories" style="border-radius:12px" src="https://open.spotify.com/embed/album/7p1fX8aUySrBdx4WSYspOu?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="One" style="border-radius:12px" src="https://open.spotify.com/embed/album/7vEJAtP3KgKSpOHVgwm3Eh?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="AM" style="border-radius:12px" src="https://open.spotify.com/embed/album/78bpIziExqiI9qztvNFlQu?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+
+                    <iframe class="player" id="CigarettesAfterSex" style="border-radius:12px" src="https://open.spotify.com/embed/album/5chTLnnxlxQVAgEv6YbEBe?utm_source=generator" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+                </div>
             </div>
         </div>
         <div class="gallery">
@@ -34,37 +76,92 @@
                 <div class="album-cover" style="background: url(https://upload.wikimedia.org/wikipedia/commons/2/20/TheBeatles68LP.jpg); background-size: 40vh;">
                     <div class="overlay">
                         <p class="album-title">White Album</p>
+                        <i>By The Beatles</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('WhiteAlbum')">Listen</div>
                     </div>
                 </div>
                 <div class="album-cover" style="background: url(https://upload.wikimedia.org/wikipedia/en/f/f5/Thestranger1977.jpg); background-size: 40vh;">
                     <div class="overlay">
                         <p class="album-title">The Stranger</p>
-                        <p><i>By Billy Joel</i></p>
-                        <div class="listen-button">Listen</div>
+                        <i>By Billy Joel</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('TheStranger')">Listen</div>
                     </div>
                 </div>
                 <div class="album-cover" style="background: url(https://upload.wikimedia.org/wikipedia/pt/6/66/Dire_Straits_-_Brothers_in_Arms.jpg); background-size: 40vh;">
                     <div class="overlay">
                         <p class="album-title">Brothers in Arms</p>
+                        <i>By Dire Straits</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('BrothersInArms')">Listen</div>
                     </div>
                 </div>
                 <div class="album-cover" style="background: url(https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png); background-size: 40vh;">
-                    <div class="overlay"></div>
+                    <div class="overlay">
+                        <p class="album-title">The Dark Side of The Moon</p>
+                        <i>By Pink Floyd</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('TheDarkSideOfTheMoon')">Listen</div>
+                    </div>
                 </div>
                 <div class="album-cover" style="background: url(https://i.scdn.co/image/ab67616d0000b27390b8a540137ee2a718a369f9); background-size: 40vh;">
-                    <div class="overlay"></div>
+                    <div class="overlay">
+                        <p class="album-title">Tracy Chapman</p>
+                        <i>By Tracy Chapman</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('TracyChapman')">Listen</div>
+                    </div>
+                </div>
+                <div class="album-cover" style="background: url(https://m.media-amazon.com/images/I/719UhQ8IhSL._UF1000,1000_QL80_.jpg); background-size: 40vh;">
+                    <div class="overlay">
+                        <p class="album-title">Cigarettes After Sex</p>
+                        <i>By Cigarettes After Sex</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('CigarettesAfterSex')">Listen</div>
+                    </div>
                 </div>
                 <div class="album-cover" style="background: url(https://i.scdn.co/image/ab67616d0000b2732f76b797c382bedcafdf45e1); background-size: 40vh;">
-                    <div class="overlay"></div>
+                    <div class="overlay">
+                        <p class="album-title">Midnight Memories</p>
+                        <i>By One Direction</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('MidnightMemories')">Listen</div>
+                    </div>
                 </div>
                 <div class="album-cover" style="background: url(https://upload.wikimedia.org/wikipedia/pt/f/fb/Beatles-one.jpg); background-size: 40vh;">
-                    <div class="overlay"></div>
+                    <div class="overlay">
+                        <p class="album-title">1</p>
+                        <i>By The Beatles</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('One')">Listen</div>
+                    </div>
                 </div>
                 <div class="album-cover" style="background: url(https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163); background-size: 40vh;">
-                    <div class="overlay"></div>
+                    <div class="overlay">
+                        <p class="album-title">AM</p>
+                        <i>By Artic Monkeys</i>
+                        <br>
+                        <div class="listen-button" onclick="mostrarMusica('AM')">Listen</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            function mostrarMusica(id) {
+                var textos = document.querySelectorAll('.player'); // Seleciona todas as caixas de descrição
+                
+                textos.forEach(function(texto) {
+                    texto.style.display = "none"; // Esconde todos os textos
+                });
+
+                var textoSelecionado = document.getElementById(id);
+                textoSelecionado.style.display = "block"; // Mostra apenas o texto correspondente ao livro clicado
+
+                document.getElementById("PlaceHolder").style.display = "none"; // Esconde a mensagem padrão
+            }
+
+        </script>
 
     </body>
 </html>
