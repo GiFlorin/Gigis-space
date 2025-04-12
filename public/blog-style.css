@@ -4,6 +4,22 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.goback {
+  color: white;
+  position:absolute;
+  top: 3vh;
+  left: 3vw;
+  background-color: #d9d9d93b;
+  border-radius: 9px;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.goback:hover {
+  background-color: rgba(109, 247, 194, 0.375);
+}
+
 
 @font-face {
     font-family: 'title'; /*a name to be used later*/
@@ -151,18 +167,3 @@ a:hover {
     }
   }
 
-.goback {
-  color: white;
-  position:absolute;
-  top: 3vh;
-  left: 3vw;
-  background-color: #d9d9d93b;
-  border-radius: 9px;
-  padding: 5px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-decoration: none;
-}
-
-.goback:hover {
-  background-color: rgba(109, 247, 194, 0.375);
-}
