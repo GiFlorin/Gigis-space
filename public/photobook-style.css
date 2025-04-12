@@ -13,6 +13,22 @@ html,body {
   font-style: normal;
 }
 
+.goback {
+  color: white;
+  position:absolute;
+  top: 3vh;
+  left: 3vw;
+  background-color: #d9d9d93b;
+  border-radius: 9px;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.goback:hover {
+  background-color: rgba(109, 247, 194, 0.375);
+}
+
 body {
   padding: 10em;
   padding-top: 2em;
@@ -31,13 +47,20 @@ h1 {
   color: #393457FF;
   font-size: 100px;
   margin:0px;
-  filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.255));
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.255);
 }
 
 p {
   font-family:'Reenie Beanie';
   font-size: 2em;
   margin: 0;
+}
+
+.separator {
+  height: 2.5em;
+  width: 80vw;
+  object-fit: fill;
+  margin-bottom: 1em; 
 }
 
 .gallery {
@@ -66,6 +89,33 @@ img {
   justify-content: space-between;
   margin-right: 1em; 
   margin-bottom: 2em;
+  transition: transform 0.3s ease-in-out;
 }
 
+.polaroid:hover {
+  transform: rotate(5deg);
+  animation: rotate 0.3s ease-in-out forwards;
+}
+
+.polaroid:not(:hover) {
+  animation: rotate-back 0.3s ease-in-out forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes rotate-back {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 

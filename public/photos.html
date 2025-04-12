@@ -9,16 +9,13 @@
         </style>
     </head>
     <body>
+        <a href="index.html" class="goback"><- go back</a>
         <h1>Photo Album '25</h1>
         <div class="button"></div>
         <div class="button"></div>
         <div class="button"></div>
-        <div class="div"></div>
+        <img class="separator" src="images/svg/vector separator.svg">
         <div class="gallery">
-            <div class="polaroid">
-                <img src="images/photobook25/0IMG_6163.jpg">
-                <p>Sand<p>
-            </div>
             <div class="polaroid">
                 <img src="images/photobook25/0IMG_6152.jpg">
                 <p>Oh the sea<p>
@@ -181,4 +178,17 @@
             </div>
         </div>
     </body>
+    <script>
+        polaroid.addEventListener('mouseover', () => {
+        // do nothing on mouseover
+        });
+
+        polaroid.addEventListener('mouseout', () => {
+        // trigger the animation on mouseout
+        polaroid.classList.add('animate-out');
+        setTimeout(() => {
+            polaroid.classList.remove('animate-out');
+        }, 2000); // remove the class after 2 seconds
+        });
+    </script>
 </html>
