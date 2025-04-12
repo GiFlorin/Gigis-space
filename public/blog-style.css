@@ -18,6 +18,7 @@ body {
 
 .goback:hover {
   background-color: rgba(109, 247, 194, 0.375);
+  text-decoration: none;
 }
 
 
