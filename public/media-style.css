@@ -190,8 +190,8 @@ summary:hover {
 .goback {
     color: white;
     position:absolute;
-    top: 3vh;
-    left: 3vw;
+    top: 1vh;
+    left: 1vw;
     background-color: #d9d9d93b;
     border-radius: 9px;
     padding: 5px;
