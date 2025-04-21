@@ -1,0 +1,91 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    clip: auto;
+    position: absolute;
+    overflow: hidden;
+    background-color: #CB4D68FF;
+    text-align: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.goback {
+  color: white;
+  position:absolute;
+  top: 3vh;
+  left: 3vw;
+  background-color: #d9d9d93b;
+  border-radius: 9px;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.goback:hover {
+  background-color: rgba(109, 247, 194, 0.375);
+}
+
+.project-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20em;
+    height: 23em;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 0.5em;
+    border: 2px dashed rgb(255, 255, 255);
+}
+
+.project span {
+    color: rgba(255, 255, 255, 0.412)
+}
+
+.project a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.323);
+    border-radius: 0.5em;
+    padding: 5px;
+    border: white solid 2px;
+    width: fit-content;
+}
+
+.project .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.project-info .tag {
+    border-radius: .5em;
+    padding: 3px;
+    margin: 3px;
+    background-color: #F99252FF;
+}
+
+.project-info .school {
+    background-color: #11ADC1FF;
+}
