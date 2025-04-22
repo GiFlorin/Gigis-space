@@ -6,7 +6,7 @@ body {
   padding-top: 1%;
   background: black; /* Cor de fundo alternativa */
   font-family:'Courier New', Courier, monospace;
-  overflow:scroll;
+  overflow:hidden;
 }
 
 .background {
@@ -89,7 +89,7 @@ a {
 .studies {top: 23%; left: 75%;}
 .studies:hover {content:url("images/planet12.png");}
 .reading:hover {content:url("images/planet22.png");}
-.reading {top: 40%; left: 20%;}
+.reading {top: 40%; left: 25%;}
 .projects:hover {content:url("images/blackhole2.png");}
 .projects {top: 23%; left: 40%;}
 .media:hover {content:url("images/fallingstar2.png");}
@@ -116,7 +116,7 @@ a {
 .music-container {
   transform: scale(0.5); /* Reduz tudo */
   position: absolute; 
-  top: 50%; 
+  top: 45%; 
   left: 5%;
 }
 
