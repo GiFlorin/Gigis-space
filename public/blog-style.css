@@ -24,7 +24,7 @@ body {
 
 @font-face {
     font-family: 'title'; /*a name to be used later*/
-    src: url("Retrogression-Regular.ttf"); /*URL to font*/
+    src: url("fonts/Retrogression-Regular.ttf"); /*URL to font*/
 }
 
 h1 {
@@ -59,8 +59,8 @@ a:hover {
     float:left;
     overflow-y: scroll;
     height: 95vh;
-    width: 49%;
-    align-content: center;
+    width: 46%;
+    align-content: flex-start;
     display:flex;
     flex-direction: row;
     margin: 10px;
@@ -68,12 +68,15 @@ a:hover {
     background: white;
     border: 2px solid #606C81FF;
     box-shadow: 3.3px 6.6px 6.6px #5BB361FF;
+    flex-wrap:wrap;
+    padding: 10px;
+    justify-content: space-around
 }
 
 .post {
     color: #606C81FF;
     height: fit-content;
-    width: 20vw;
+    width: 40%;
     border-radius: 0.5em;
     background: white;
     border: #606C81FF solid;

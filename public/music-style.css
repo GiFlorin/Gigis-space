@@ -33,7 +33,7 @@ body {
 
 @font-face {
     font-family: 'konkhmer';
-    src: url(konkhmer-sleokchher-khmer-400-normal.ttf);
+    src: url(fonts/konkhmer-sleokchher-khmer-400-normal.ttf);
 }
 
 .top {

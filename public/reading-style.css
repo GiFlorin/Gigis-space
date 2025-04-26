@@ -15,7 +15,7 @@ body {
 
 @font-face {
     font-family: 'title'; /*a name to be used later*/
-    src: url("Retrogression-Regular.ttf"); /*URL to font*/
+    src: url("fonts/Retrogression-Regular.ttf"); /*URL to font*/
 }
 
 h2 {
