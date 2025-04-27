@@ -70,6 +70,7 @@ h1 {
 }
 
 img {
+  object-fit: cover;
   height: 20em;
   width: 20em;
   float: right;
@@ -99,4 +100,14 @@ span {
   color: #dcd2bd;
   padding: 2px;
   border-radius: 0.5em;
+}
+
+blockquote {
+  text-align: start;
+  font-style: italic;
+  width: 50%;
+}
+
+a {
+  color: #CB4D68FF;
 }
