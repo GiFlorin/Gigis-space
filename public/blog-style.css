@@ -82,6 +82,7 @@ a:hover {
     border: #606C81FF solid;
     margin: 10px;
     box-shadow: 3.3px 6.6px 6.6px #F99252FF;
+    padding: 10px;
 }
 
 .star {

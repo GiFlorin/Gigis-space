@@ -111,3 +111,16 @@ blockquote {
 a {
   color: #CB4D68FF;
 }
+
+ul {
+  text-align: start;
+  line-height: 2;
+}
+
+.divider {
+  height:2px;
+  width:100%;
+  background: rgba(203, 77, 104, 0.353);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
