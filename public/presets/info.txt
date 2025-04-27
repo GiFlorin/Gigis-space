@@ -14,5 +14,5 @@ redpink = #CB4D68FF
 purple = #6A3771FF
 pinkchock = #C92464FF
 babypink = #F48CB6FF
-salmon = #CCB37D
+salmon = #dcd2bd
 greengrey = #9B9C82FF 
