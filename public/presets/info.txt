@@ -16,3 +16,4 @@ pinkchock = #C92464FF
 babypink = #F48CB6FF
 salmon = #dcd2bd
 greengrey = #9B9C82FF 
+transparent = #ffffff00
