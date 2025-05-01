@@ -16,19 +16,9 @@ body {
     color: #dcd2bd;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-@font-face {
-    font-family: 'title';
-    src: url(fonts/Retrogression-Regular.ttf);
-}
-
-h1 {
-    font-family: 'title';
-    font-size: 5em;
-}
-
+  
 .goback {
-    color: #dcd2bd;
+    color: white;
     position:absolute;
     top: 3vh;
     left: 3vw;
@@ -38,22 +28,8 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
 }
-
+  
 .goback:hover {
-    background-color: rgba(247, 109, 210, 0.375);
+    background-color: rgba(109, 247, 194, 0.375);
 }
-
-i {
-    background-color: #F99252FF;
-    border-radius: .5em;
-    padding: 2px;
-}
-
-.changelog {
-    border: #dcd2bd dashed 2px;
-    width: 30%;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    border-radius: 1em;
-}
+  
