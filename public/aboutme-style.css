@@ -40,7 +40,7 @@ body {
     animation: scroll-diagonal 20s linear infinite;
 }
 
-.goback, .changelog {
+.goback, .changelog, .linkspage {
     color: white;
     position:absolute;
     top: 3vh;
@@ -61,7 +61,12 @@ body {
     left: 10vw;
 }
 
-.changelog:hover {
+.linkspage {
+    background-color: #F99252FF;
+    left: 17vw;
+}
+
+.changelog:hover, .linkspage:hover {
     background-color: rgba(223, 200, 66, 0.593);
 }
 
