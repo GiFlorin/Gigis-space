@@ -95,6 +95,10 @@ ul {
     color:#CB4D68FF;
 }
 
+ul li {
+    list-style: none;
+}
+
 a {
     color: #CB4D68FF;
     text-decoration-style:wavy;
@@ -105,6 +109,11 @@ a {
 a:hover {
     color: #11ADC1FF;
     text-decoration-color:#CB4D68FF;
+}
+
+ul li::before {
+    background-image: none;
+    content: '⚘ ';
 }
 
     </style>
