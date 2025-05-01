@@ -80,3 +80,39 @@ a {
 .button {
     margin: 20px;
 }
+
+.copy-text {
+    background-color: rgb(184, 219, 147);
+    color: #5BB361FF;
+    padding: 5px;
+    border-radius: 1px;
+    filter: drop-shadow(6px 6px 10px rgba(31, 27, 49, 0.381));
+    border: white solid 2px;
+    width: 25em;
+    margin: auto;
+}
+
+.copy-button {
+    background-color: #11ADC1FF;
+    color: white;
+    padding: 5px;
+    border-radius: 2em;
+    filter: drop-shadow(6px 6px 10px rgba(31, 27, 49, 0.381));
+    border: white solid 2px;
+    width: 10em;
+    margin: 2em;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.success {
+    background: #0d8b79;
+    transition: 0.3s;
+}

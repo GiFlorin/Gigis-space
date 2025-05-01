@@ -37,6 +37,18 @@
             </div>
             
         </div>
+        <h1>Link me!</h1>
+        <div class="wrapper">
+            <div class="container">
+                <div class="button">
+                    <a href="https://giflorin.neocitien.org"><img src="images/button.png" class="pixelated" style="aspect-ratio: 88/31;">  </a>
+                </div>
+            </div>
+            <div class="wrapper" style="flex-direction: column; margin-left: 3em;">
+                <input class="copy-text" type="text" value="&lt;a href=&quot;https://giflorin.neocitien.org&quot;&gt;&lt;img src=&quot;images/button.png&quot; class=&quot;pixelated blue&quot; style=&quot;aspect-ratio: 88/31;&quot; alt=&quot;space link button&quot;&gt;&lt;/a&gt;">
+                <p class="copy-button">Copy</p>
+            </div>
+        </div>
         <h1>Links</h1>
         <h3>Other pages that inspire me!</h3>
         <div class="container">
@@ -63,4 +75,20 @@
             <!--<div class="button"><a href=""><img src="" class="pixelated"></a></div> -->
         </div>
     </body>
+    <script>
+        const copyButton = document.querySelector(".copy-button");
+        const copyText = document.querySelector(".copy-text");
+        
+        copyButton.addEventListener("click", () => {
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          copyButton.classList.toggle("success");
+          copyButton.innerHTML = "Copied!";
+        
+          setTimeout(function () {
+            copyButton.classList.toggle("success");
+            copyButton.innerHTML = "Copy";
+          }, 2000);
+        });</script>
 </html>
