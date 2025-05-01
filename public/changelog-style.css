@@ -3,7 +3,12 @@ html,body {
     height: 100%;
     clip: auto;
     position: absolute;
-    overflow: hidden;
+    
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {

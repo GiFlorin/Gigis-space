@@ -9,6 +9,16 @@ html {
     overflow-y: scroll;
 }
 
+@font-face {
+    font-family: 'font';
+    src: url(fonts/Retrogression-Regular.ttf);
+}
+
+h1 {
+    font-size: 4em;
+    font-family: 'font';
+}
+
 body {
     background-color: #5BB361FF;
     text-align: center;

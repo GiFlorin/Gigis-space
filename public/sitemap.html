@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="pagetitle-style.css" type="text/css" media="screen, projection"/>
+        <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+        <title>Sitemap</title>
+    </head>
+    <body>
+        <a href="index.html" class="goback"><- go back</a>
+        <div class="main">
+            <h1>Sitemap</h1>
+            <ul class="map">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About me page</a></li>
+                <ul>
+                    <li><a href="links.html">Links page</a></li>
+                    <li><a href="Changelog.html">Changelog page</a></li>
+                </ul>
+                <li><a href="media.html">Media log page</a></li>
+                <li><a href="blog.html">Blog main page</a></li>
+                <li><a href="music.html">Music page</a></li>
+                <li><a href="photos.html">Photography page</a></li>
+                <li><a href="reading.html">Reading page</a></li>
+                <li><a href="projects.html">Projects page</a></li>
+            </ul>
+        </div>
+    </body>
+    <style>
+        html,body {
+  width: 100%;
+  height: 100%;
+  clip: auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/736x/00/de/70/00de7055113ca85b40605bc8fd4fdfda.jpg);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goback {
+  color: #11ADC1FF;
+  position:absolute;
+  top: 3vh;
+  left: 3vw;
+  background-color: rgba(255, 255, 255, 0.584);
+  border-radius: 9px;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.goback:hover {
+  background-color: rgba(109, 247, 194, 0.375);
+}
+
+.main {
+    width: 30%;
+    margin:auto;
+    background: rgb(195, 232, 237);
+    border-radius: 1em ;
+    border: #11ADC1FF dashed 3px;
+    height: auto;
+    margin:5px;
+    margin-top: 0px;
+}
+
+@font-face {
+    font-family: 'title';
+    src: url(fonts/Retrogression-Regular.ttf);
+}
+
+h1 {
+    font-family: 'title';
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #CB4D68FF;
+}
+
+.map {
+    margin: auto;
+    padding: 0;
+    width:fit-content;
+    margin-bottom: 2em;
+}
+
+ul {
+    color:#CB4D68FF;
+}
+
+a {
+    color: #CB4D68FF;
+    text-decoration-style:wavy;
+    line-height: 1.5;
+    text-decoration-color: #11ADC1FF;
+}
+
+a:hover {
+    color: #11ADC1FF;
+    text-decoration-color:#CB4D68FF;
+}
+
+    </style>
+</html>
