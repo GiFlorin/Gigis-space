@@ -40,34 +40,31 @@ body {
     animation: scroll-diagonal 20s linear infinite;
 }
 
-.goback, .changelog, .linkspage {
+.header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.nav {
     color: white;
-    position:absolute;
     top: 3vh;
     left: 3vw;
-    background-color: #d9d9d93b;
+    background-color: #F99252FF;
     border-radius: 9px;
     padding: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
+    margin: 2em;
   }
   
-.goback:hover {
-    background-color: rgba(109, 247, 194, 0.375);
-}
-
-.changelog {
-    background-color: #F99252FF;
-    left: 10vw;
-}
-
-.linkspage {
-    background-color: #F99252FF;
-    left: 17vw;
-}
-
-.changelog:hover, .linkspage:hover {
-    background-color: rgba(223, 200, 66, 0.593);
+.nav:hover {
+    background-color: rgba(247, 185, 109, 0.375);
 }
 
 @keyframes scroll-diagonal {
