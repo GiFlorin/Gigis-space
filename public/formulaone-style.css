@@ -111,6 +111,7 @@ ul {
 
 ul li {
     text-align: start;
+    line-height: 1.5;
 }
 
 .tooltip {
@@ -152,4 +153,10 @@ ul li {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+.highlight {
+    background-color: #CB4D68FF;
+    border-radius: 10px;
+    padding: 2px;
 }
