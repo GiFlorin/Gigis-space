@@ -1,5 +1,6 @@
 html {
-    scrollbar-color: #C92464FF;
+    scrollbar-color: rgb(203, 96, 137) rgba(30, 136, 117, 0);
+    scrollbar-width: thin;
 }
 
 body {
@@ -7,7 +8,7 @@ body {
     padding: 10px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow-y: scroll;
+    overflow-y: hidden;
     background-image: url('images/backgrounds/readingbg.png');
     background-size: 100%;
     align-content: center;
@@ -35,7 +36,7 @@ h3 {
 h4 {
     font-size: 4em;
     font-family: 'Reenie Beanie';
-    margin: .7em;
+    margin: .4em;
 }
 
 img {
@@ -80,10 +81,11 @@ a:hover {
     background: #606C81;
     border-radius: 0 0 .7em .7em ;
     border: #393457 solid 1em;
-    height: 100vh;
+    height: 90vh;
     overflow-y: scroll;
     margin:5px;
     margin-top: 0px;
+    scrollbar-width: thin;
 }
 
 .books {
@@ -188,11 +190,15 @@ a:hover {
     display: none;
     text-align: center;
     margin:40px;
+    margin-top: 1em;
     background: #c9246391;
     padding:20px;
     border-radius: 2em;
     padding-top:5px;
     border: white dashed 2px;
+    height: 67vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 .date {
