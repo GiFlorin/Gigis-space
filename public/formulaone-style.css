@@ -21,6 +21,10 @@ h1 {
     margin-bottom: 0px;
 }
 
+h3 {
+    margin: 0px;
+}
+
 header {
     text-align: center;
     color: white;
@@ -159,4 +163,112 @@ ul li {
     background-color: #CB4D68FF;
     border-radius: 10px;
     padding: 2px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #F99252FF;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+    text-align: start;
+}
+
+summary h3 {
+    margin-left: 10px;
+}
+
+summary:hover {
+    background-color: rgb(235, 162, 117);
+}
+
+summary:active, .team:hover {
+    transform:scale(0.9);
+    cursor: pointer;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.team {
+    width: 11em;
+    text-align: center;
+    margin-left: 2em;
+}
+
+.team img{
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.moving-teams {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    animation-name: moving-teams;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    &:hover .group {
+      animation-play-state: paused;
+    }
+}
+
+.moving-teams:hover {
+    animation-play-state: paused;
+}
+
+@keyframes moving-teams {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(-200%);}
+}
+
+.track {
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.track::before,.track::after {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 0) 0%, rgba(57, 52, 87, 1) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+	
+.track::after {
+    right: 0;
+    top: 0;
+}
+
+.track::before {
+    left: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: fit-content;
 }
