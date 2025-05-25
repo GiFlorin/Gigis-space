@@ -36,6 +36,18 @@ body {
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #11ADC1FF;
+}
+
+a:hover {
+    color: #11ADC1FF;
+    text-decoration-color: white;
+}
   
 .goback {
     color: white;
@@ -97,6 +109,8 @@ main p {
     background-color: #F99252FF;
     border-radius: 1em;
     border: white dashed 2px;
+    margin-bottom: 2em;
+    
 }
 
 hr {
@@ -113,7 +127,7 @@ ul {
     margin-left: 2em;
 }
 
-ul li {
+ul li, ol li {
     text-align: start;
     line-height: 1.5;
 }
@@ -173,6 +187,7 @@ summary {
     padding: 10px;
     width: 70%;
     text-align: start;
+    margin-bottom: 1em;
 }
 
 summary h3 {
@@ -217,7 +232,7 @@ details > summary::-webkit-details-marker {
     width: 100%;
     margin: 0 auto;
     animation-name: moving-teams;
-    animation-duration: 20s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     &:hover .group {
@@ -271,4 +286,9 @@ details > summary::-webkit-details-marker {
     align-items: center;
     position: relative;
     width: fit-content;
+}
+
+.wrapper {
+    height:fit-content;
+    width:fit-content
 }
