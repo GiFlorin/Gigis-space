@@ -93,7 +93,7 @@ main {
     float: left;
 }
 
-main p {
+p {
     text-align: justify;
     text-indent: 50px;
     letter-spacing: 1.3px;
@@ -125,11 +125,15 @@ h2 {
 
 ul {
     margin-left: 2em;
+    
 }
 
 ul li, ol li {
     text-align: start;
     line-height: 1.5;
+    text-align: justify;
+    letter-spacing: 1.3px;
+    margin-bottom: 1em;
 }
 
 .tooltip {
@@ -210,10 +214,15 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.team {
+.team, .photo {
+    display: inline-block;
     width: 11em;
     text-align: center;
     margin-left: 2em;
+}
+
+.photo {
+    margin-left: 6em;
 }
 
 .team img{
@@ -221,6 +230,14 @@ details > summary::-webkit-details-marker {
     width: 10em;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.photo img{
+    height: 15em;
+    width: 15em;
+    object-fit: cover;
+    background-color: whitesmoke;
+    padding: 0.5em;
 }
 
 .moving-teams {
@@ -249,7 +266,8 @@ details > summary::-webkit-details-marker {
     100% { transform: translateX(-200%);}
 }
 
-.track {
+.track, .senna-track {
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
@@ -258,6 +276,17 @@ details > summary::-webkit-details-marker {
     align-items: center;
     position: relative;
 }
+
+.senna-track::before,.senna-track::after {
+    background: #F7E476FF;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 0) 0%, rgb(247, 228, 118) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
 .track::before,.track::after {
     background: #2A7B9B;
     background: linear-gradient(90deg, rgba(42, 123, 155, 0) 0%, rgba(57, 52, 87, 1) 100%);
@@ -268,12 +297,12 @@ details > summary::-webkit-details-marker {
     z-index: 2;
 }
 	
-.track::after {
+.track::after, .senna-track::after {
     right: 0;
     top: 0;
 }
 
-.track::before {
+.track::before, .senna-track::before {
     left: 0;
     top: 0;
     transform: rotate(180deg);
@@ -295,13 +324,52 @@ details > summary::-webkit-details-marker {
 
 .senna {
     height: fit-content;
-    width: 100vw;
+    border-radius: 2em;
+    border: #F7E476FF 0.5em solid;
+    width: 99vw;
     background-color: #F7E476FF;
     color: #393457FF;
     transform:translateX(-3em);
-    padding: 1em;
+    padding: 0;
 }
 
 .senna h2 {
+    margin-top: 1em;
+    font-size: 3em;
+    font-weight: bolder ;
     color: #1E8875FF;
+}
+
+.brazil-flag {
+    position: absolute;
+    top: 2em;
+    left: 70vw;
+    width: 7em;
+    height: 5em;
+    margin: auto;
+    background-color: #5BB361FF;
+    align-content: center;
+    justify-content: center;
+    border-radius: 0.4em;
+    transform: rotate(8deg);
+    filter:drop-shadow(6px 6px 10px rgba(27, 49, 31, 0.184));
+}
+
+.brazil-flag .losango {
+    background-color: #F7E476FF;
+    aspect-ratio: 1/1;
+    width: 50%;
+    transform: rotate(45deg);
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 0.3em;
+}
+
+.brazil-flag .losango .circulo {
+    background-color: #393457FF;
+    border-radius: 50%;
+    width: 70%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
 }
