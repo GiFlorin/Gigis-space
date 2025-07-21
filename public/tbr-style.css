@@ -42,7 +42,7 @@ ul {
     line-height: 1.5;
     height: 65%;
     overflow-y:scroll;
-    scrollbar-color: #d9d9d93b #1E8875FF;
+    scrollbar-color: #d9d9d93b rgba(30, 136, 117, 0);
 }
 
 .goback {

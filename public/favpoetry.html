@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #1F1B31FF;
+            text-align: center;
+            color: #C92464FF;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 2em;
+        }
+
+        .goback {
+            color: white;
+            position: absolute;
+            top: 3vh;
+            left: 3vw;
+            background-color: #d9d9d93b;
+            border-radius: 9px;
+            padding: 5px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-decoration: none;
+            z-index: 3;
+            transition: background-color 0.3s ease;
+        }
+
+        .goback:hover {
+            background-color: rgba(109, 247, 194, 0.375);
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Reenie Beanie';
+            margin-bottom: 0;
+        }
+
+        .scroll-horizontal-wrapper {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 100%;
+            height: 60%;
+            position: relative;
+        }
+
+        .poem-board {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 100%;
+            width: max-content;
+            gap: 1rem;
+            transition: transform 0.1s ease-out;
+        }
+
+        .poem {
+            color: white;
+            border-radius: 0.5em;
+            padding: 20px;
+            width: 15vw;
+            min-width: 250px;
+            border: whitesmoke solid 2px;
+            filter: drop-shadow(6px 6px 10px rgba(31, 27, 49, 0.381));
+            flex-shrink: 0;
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .poem h2 {
+            font-family: 'Reenie Beanie';
+            margin: 0 0 10px 0;
+            font-size: 2em;
+        }
+
+        .poem p {
+            margin: 5px 0;
+        }
+
+        .blue { background-color: #11ADC1FF; }
+        .green { background-color: #5BB361FF; }
+        .pink { background-color: #C92464FF; }
+        .orange { background-color: #F99252FF; }
+        .purple { background-color: #6A3771FF; }
+        .red { background-color: #CB4D68FF; }
+
+        /* Gradientes fixos na viewport, não no conteúdo */
+        .scroll-horizontal-wrapper::before, 
+        .scroll-horizontal-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .scroll-horizontal-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, rgba(31, 27, 49, 1) 0%, rgba(31, 27, 49, 0) 100%);
+        }
+
+        .scroll-horizontal-wrapper::after {
+            right: 0;
+            background: linear-gradient(90deg, rgba(31, 27, 49, 0) 0%, rgba(31, 27, 49, 1) 100%);
+        }
+    </style>
+    <title>Fav Poetry</title>
+</head>
+<body>
+    <a href="reading.html" class="goback">← go back</a>
+    <h1>Poetry</h1>
+    <p style="color:rgb(67, 60, 101)"><i>(scroll plz :))</i></p>
+    
+    <div class="scroll-horizontal-wrapper" id="scrollWrapper">
+        <div class="poem-board" id="scrollContent">
+            <div class="poem blue">
+                <h2>When you are old</h2>
+                <p>When you are old and grey and full of sleep,</p>
+                <p>And nodding by the fire, take down this book...</p>
+                <p><i>W.B. Yeats</i></p>
+            </div>
+            <div class="poem green">
+                <h2>The Road Not Taken</h2>
+                <p>Two roads diverged in a yellow wood,</p>
+                <p>And sorry I could not travel both...</p>
+                <p><i>Robert Frost</i></p>
+            </div>
+            <div class="poem pink">
+                <h2>Sonnet 18</h2>
+                <p>Shall I compare thee to a summer's day?</p>
+                <p>Thou art more lovely and more temperate...</p>
+                <p><i>William Shakespeare</i></p>
+            </div>
+            <div class="poem orange">
+                <h2>Hope</h2>
+                <p>Hope is the thing with feathers</p>
+                <p>That perches in the soul...</p>
+                <p><i>Emily Dickinson</i></p>
+            </div>
+            <div class="poem purple">
+                <h2>The Raven</h2>
+                <p>Once upon a midnight dreary,</p>
+                <p>while I pondered, weak and weary...</p>
+                <p><i>Edgar Allan Poe</i></p>
+            </div>
+            <div class="poem blue">
+                <h2>I Wandered Lonely</h2>
+                <p>I wandered lonely as a cloud</p>
+                <p>That floats on high o'er vales and hills...</p>
+                <p><i>William Wordsworth</i></p>
+            </div>
+            <div class="poem green">
+                <h2>Do Not Go Gentle</h2>
+                <p>Do not go gentle into that good night,</p>
+                <p>Old age should burn and rave at close of day...</p>
+                <p><i>Dylan Thomas</i></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class InfiniteScroll {
+            constructor(wrapper, content) {
+                this.wrapper = wrapper;
+                this.content = content;
+                this.currentX = 0;
+                this.targetX = 0;
+                this.isScrolling = false;
+                this.itemWidth = 0;
+                this.totalItems = 0;
+                this.originalItems = [];
+                this.needsReset = false;
+                
+                this.init();
+            }
+            
+            init() {
+                // Guarda os itens originais
+                this.originalItems = Array.from(this.content.children);
+                this.totalItems = this.originalItems.length;
+                
+                // Calcula dimensões mais precisas
+                const firstItem = this.originalItems[0];
+                const gap = parseInt(window.getComputedStyle(this.content).gap) || 16;
+                this.itemWidth = firstItem.offsetWidth + gap;
+                
+                // Cria múltiplos conjuntos para scroll mais suave
+                this.setupMultipleSets();
+                
+                // Posiciona no conjunto do meio (agora é o conjunto 7)
+                const middleSetIndex = 7; // 0,1,2,3,4,5,6,[7],8,9,10,11,12,13,14
+                this.currentX = this.targetX = -(middleSetIndex * this.totalItems * this.itemWidth);
+                this.updatePosition();
+                
+                // Event listener
+                this.wrapper.addEventListener('wheel', (e) => this.handleWheel(e), { passive: false });
+                
+                // Inicia animação
+                this.animate();
+            }
+            
+            setupMultipleSets() {
+                // Cria 15 conjuntos idênticos para buffer massivo
+                this.content.innerHTML = '';
+                
+                for (let setIndex = 0; setIndex < 15; setIndex++) {
+                    this.originalItems.forEach(item => {
+                        const clone = item.cloneNode(true);
+                        this.content.appendChild(clone);
+                    });
+                }
+            }
+            
+            handleWheel(e) {
+                e.preventDefault();
+                
+                const scrollSpeed = 2.5;
+                this.targetX -= e.deltaY * scrollSpeed;
+                
+                if (!this.isScrolling) {
+                    this.isScrolling = true;
+                }
+            }
+            
+            updatePosition() {
+                this.content.style.transform = `translateX(${this.currentX}px)`;
+            }
+            
+            checkForReset() {
+                const oneSetWidth = this.totalItems * this.itemWidth;
+                const middlePosition = -(7 * oneSetWidth); // Posição do conjunto do meio (index 7)
+                
+                // Reseta mais cedo - quando sai da zona segura (conjuntos 4-10)
+                if (this.currentX > -(4 * oneSetWidth) || this.currentX < -(10 * oneSetWidth)) {
+                    this.needsReset = true;
+                }
+            }
+            
+            performInvisibleReset() {
+                if (!this.needsReset || this.isScrolling) return;
+                
+                const oneSetWidth = this.totalItems * this.itemWidth;
+                const middlePosition = -(7 * oneSetWidth); // Conjunto 7 é o meio
+                
+                // Calcula o offset atual em relação ao padrão
+                const currentOffset = (this.currentX % oneSetWidth);
+                
+                // Reposiciona instantaneamente para o conjunto do meio
+                // mantendo a mesma posição relativa dentro do conjunto
+                this.currentX = middlePosition + currentOffset;
+                this.targetX = middlePosition + currentOffset;
+                
+                this.needsReset = false;
+            }
+            
+            animate() {
+                // Animação suave
+                if (this.isScrolling) {
+                    const diff = this.targetX - this.currentX;
+                    this.currentX += diff * 0.15;
+                    
+                    if (Math.abs(diff) < 0.05) {
+                        this.currentX = this.targetX;
+                        this.isScrolling = false;
+                        
+                        // Só faz reset quando para de rolar
+                        this.performInvisibleReset();
+                    }
+                }
+                
+                // Verifica se precisa resetar (mas não faz ainda)
+                if (!this.isScrolling) {
+                    this.checkForReset();
+                }
+                
+                // Atualiza posição visual
+                this.updatePosition();
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        
+        // Inicializa quando DOM carrega
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.getElementById('scrollWrapper');
+            const content = document.getElementById('scrollContent');
+            new InfiniteScroll(wrapper, content);
+        });
+    </script>
+</body>
+</html>

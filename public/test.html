@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poetry Scroll</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #1F1B31FF;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4em;
+      font-family: 'Reenie Beanie', cursive;
+      margin: 20px 0 0 0;
+    }
+
+    p {
+      text-align: center;
+      color: #ccc;
+      margin: 0 0 20px 0;
+    }
+
+    .scroll-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-content {
+      display: flex;
+      flex-wrap: nowrap;
+      width: max-content;
+    }
+
+    .poem {
+      flex-shrink: 0;
+      width: 300px;
+      height: 200px;
+      margin: 0 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #C92464FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+
+    .poem:nth-child(2n) {
+      background: #11ADC1FF;
+    }
+
+    .poem:nth-child(3n) {
+      background: #6A3771FF;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Poetry</h1>
+  <p>(scroll plz :))</p>
+
+  <div class="scroll-wrapper" id="scrollWrapper">
+    <div class="scroll-content" id="scrollContent">
+      <div class="poem"><h2>Poem 1</h2><p>Line 1</p><p>Line 2</p></div>
+      <div class="poem"><h2>Poem 2</h2><p>Line 1</p><p>Line 2</p></div>
+      <div class="poem"><h2>Poem 3</h2><p>Line 1</p><p>Line 2</p></div>
+      <div class="poem"><h2>Poem 4</h2><p>Line 1</p><p>Line 2</p></div>
+      <div class="poem"><h2>Poem 5</h2><p>Line 1</p><p>Line 2</p></div>
+    </div>
+  </div>
+
+<script>
+  const wrapper = document.getElementById('scrollWrapper');
+  const content = document.getElementById('scrollContent');
+
+  // Duplicar conteúdo para scroll infinito
+  content.innerHTML += content.innerHTML;
+
+  // Metade real do conteúdo (o conteúdo original)
+  const half = content.scrollWidth / 2;
+
+  // Começa no meio
+  wrapper.scrollLeft = half;
+  let scrollTarget = wrapper.scrollLeft;
+  let isScrolling = false;
+
+  wrapper.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    scrollTarget += e.deltaY;
+
+    if (!isScrolling) {
+      isScrolling = true;
+      requestAnimationFrame(smoothScroll);
+    }
+  }, { passive: false });
+
+  function smoothScroll() {
+    const current = wrapper.scrollLeft;
+    const distance = scrollTarget - current;
+    wrapper.scrollLeft = current + distance * 0.1;
+
+    // Correção de looping: reposiciona sempre que sai do intervalo original
+    if (wrapper.scrollLeft > half * 1.5) {
+      wrapper.scrollLeft -= half;
+      scrollTarget -= half;
+    } else if (wrapper.scrollLeft < half * 0.5) {
+      wrapper.scrollLeft += half;
+      scrollTarget += half;
+    }
+
+    if (Math.abs(distance) > 0.5) {
+      requestAnimationFrame(smoothScroll);
+    } else {
+      isScrolling = false;
+    }
+  }
+</script>
+
+</body>
+</html>
