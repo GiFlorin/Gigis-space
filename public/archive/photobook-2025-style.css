@@ -32,14 +32,14 @@ html,body {
 body {
   padding: 10em;
   padding-top: 2em;
-  background-image: url('images/photobookbg.png');
+  background-image: url('../images/photobookbg.png');
   background-size:100%;
   background-repeat: no-repeat;
 }
 
 @font-face {
     font-family: 'konkhmer';
-    src: url(fonts/konkhmer-sleokchher-khmer-400-normal.ttf);
+    src: url(../fonts/konkhmer-sleokchher-khmer-400-normal.ttf);
 }
 
 h1 {

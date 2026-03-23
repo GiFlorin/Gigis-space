@@ -19,7 +19,7 @@ body {
   height: 200%;
   
   /* Aplica a textura e define a repetição */
-  background-image: url('images/background.png');
+  background-image: url('../images/background.png');
   background-size: 256px 256px;
   background-repeat: repeat;
   background-position: 0 0;
@@ -49,7 +49,7 @@ p {
 
 @font-face {
   font-family: 'title'; /*a name to be used later*/
-  src: url("fonts/Retrogression-Regular.ttf"); /*URL to font*/
+  src: url("../fonts/Retrogression-Regular.ttf"); /*URL to font*/
 }
 
 h1 {
@@ -85,18 +85,18 @@ a {
 }
 
 .guestbook {top: 70%; left: 60%;}
-.guestbook:hover {content:url('images/planet02.png');}
+.guestbook:hover {content:url('../images/planet02.png');}
 .studies {top: 23%; left: 75%;}
-.studies:hover {content:url("images/planet12.png");}
-.reading:hover {content:url("images/planet22.png");}
+.studies:hover {content:url("../images/planet12.png");}
+.reading:hover {content:url("../images/planet22.png");}
 .reading {top: 40%; left: 25%;}
-.projects:hover {content:url("images/blackhole2.png");}
+.projects:hover {content:url("../images/blackhole2.png");}
 .projects {top: 23%; left: 40%;}
-.media:hover {content:url("images/fallingstar2.png");}
+.media:hover {content:url("../images/fallingstar2.png");}
 .media {top: 40%; left: 60%;}
-.photos:hover {content:url("images/galaxy2.png");}
+.photos:hover {content:url("../images/galaxy2.png");}
 .photos {top: 70%; left: 35%;}
-.blog:hover {content:url("images/ovni2.png");}
+.blog:hover {content:url("../images/ovni2.png");}
 .blog {top: 55%; left: 80%;}
 
 .aboutme {
@@ -105,7 +105,7 @@ a {
   top: 15%; left: 5%;
 }
 
-.aboutme:hover {content:url("images/foguete2.png");}
+.aboutme:hover {content:url("../images/foguete2.png");}
 
 @keyframes planet-animation {
   0% { transform: translateY(0px);}
@@ -123,7 +123,7 @@ a {
 .music {
   height: 512px;
   width: 512px;
-  background: url('images/planet411.png');
+  background: url('../images/planet411.png');
   background-repeat: no-repeat;
   animation-name: music-animation, planet-animation;
   animation-direction: linear, alternate;
@@ -138,6 +138,6 @@ a {
 }
 
 .music:hover {
-  background: url('images/planet431.png');
+  background: url('../images/planet431.png');
 }
 

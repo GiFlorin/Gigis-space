@@ -19,7 +19,7 @@ body {
 
 @font-face {
     font-family: 'title';
-    src: url(fonts/Retrogression-Regular.ttf);
+    src: url(../fonts/Retrogression-Regular.ttf);
 }
 
 h1 {

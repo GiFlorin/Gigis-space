@@ -22,12 +22,12 @@ body {
 
 @font-face {
   font-family: 'font';
-  src: url(fonts/Typewriter.ttf);
+  src: url(../fonts/Typewriter.ttf);
 }
 
 @font-face {
   font-family: 'title';
-  src: url(fonts/Retrogression-Regular.ttf);
+  src: url(../fonts/Retrogression-Regular.ttf);
 }
 
 h1 {
