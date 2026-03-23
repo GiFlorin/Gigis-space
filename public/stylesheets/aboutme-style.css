@@ -28,7 +28,7 @@ body {
     height: 200%;
 
     /* Aplica a textura e define a repetição */
-    background-image: url('images/bg01.png');
+    background-image: url('../images/bg01.png');
     background-size: 256px 256px;
     background-repeat: repeat;
     background-position: 0 0;

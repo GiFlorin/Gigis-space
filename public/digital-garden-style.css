@@ -7,7 +7,7 @@ html,body {
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -16,6 +16,7 @@ body {
   text-align: center;
   color: #dcd2bd;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-y: hidden;
 }
 
 @font-face {
@@ -26,6 +27,11 @@ body {
 h1 {
   font-family: 'title';
   font-size: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: #cb4d68;
 }
 
 .goback {
@@ -47,7 +53,7 @@ h1 {
 .window {
   color: #cb4d68;
   width: 70%;
-  height: 80%;
+  height: 100%;
   margin:auto;
   margin-top: 3em;
   top: 0;
@@ -97,5 +103,8 @@ h1 {
   margin-top: 0;
   border-top-width: 0;
   padding: 1em;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height:70%;
 }
 
