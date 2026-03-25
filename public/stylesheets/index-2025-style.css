@@ -5,7 +5,7 @@ body {
   padding: 5%;
   padding-top: 1%;
   background: black; /* Cor de fundo alternativa */
-  font-family:'helvetica', sans-serif;
+  font-family:'Courier New', Courier, monospace;
   overflow:hidden;
 }
 
@@ -19,7 +19,7 @@ body {
   height: 200%;
   
   /* Aplica a textura e define a repetição */
-  background-image: url('../images/backgrounds/space-tile.png');
+  background-image: url('../images/background.png');
   background-size: 256px 256px;
   background-repeat: repeat;
   background-position: 0 0;
@@ -43,7 +43,7 @@ body {
 /*Conteudo da tela*/
 p {
   text-align: center;
-  color: #1f1b31;
+  color:#F8FFE5;
   position: relative
 }
 
@@ -55,10 +55,10 @@ p {
 h1 {
   font-family: "title";
   color: whitesmoke;
-  width: fit-content;
+  width: 30%;
   text-align: center;
   position: relative;
-  margin: 0.5em;
+  margin: auto;
   font-size: 3.5em;
 }
 
@@ -71,21 +71,12 @@ a {
   font-family: "Courier New", monospace;
   font-weight: bold;
   text-decoration: none;
-  height:fit-content;
-}
-
-.header {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em;
 }
 
 .planet {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  filter:drop-shadow(5px 9px 16px #1a1c38);
+  height: 200px;
+  width: 200px;
+  position: absolute;
   animation-name: planet-animation;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -93,25 +84,28 @@ a {
   animation-direction: alternate;
 }
 
-
+.guestbook {top: 70%; left: 60%;}
 .guestbook:hover {content:url('../images/planet02.png');}
+.studies {top: 13%; left: 75%;}
 .studies:hover {content:url("../images/planet12.png");}
 .reading:hover {content:url("../images/planet22.png");}
+.reading {top: 45%; left: 27%;}
 .projects:hover {content:url("../images/blackhole2.png");}
+.projects {top: 45%; left: 50%;}
 .media:hover {content:url("../images/fallingstar2.png");}
+.media {top: 40%; left: 72%;}
 .photos:hover {content:url("../images/galaxy2.png");}
+.photos {top: 70%; left: 35%;}
 .blog:hover {content:url("../images/ovni2.png");}
+.blog {top: 65%; left: 80%;}
 
-
-.planet.aboutme {
-  position:relative;
-  height:600px;
+.aboutme {
+  height:300px;
   width:300px;
-  margin: auto;
-  margin-top:0% ;
+  top: 15%; left: 5%;
 }
 
-.aboutme:hover {content:url("../images/space/Spaceship1.png")}
+.aboutme:hover {content:url("../images/foguete2.png");}
 
 @keyframes planet-animation {
   0% { transform: translateY(0px);}
@@ -119,32 +113,62 @@ a {
   100% { transform: translateY(0px)}
 }
 
+.music-container {
+  transform: scale(0.5); /* Reduz tudo */
+  position: absolute; 
+  top: 45%; 
+  left: 5%;
+}
+
+.music {
+  height: 512px;
+  width: 512px;
+  background: url('../images/planet411.png');
+  background-repeat: no-repeat;
+  animation-name: music-animation, planet-animation;
+  animation-direction: linear, alternate;
+  animation-duration: 0.7s, 2s;
+  animation-timing-function: steps(4), ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+@keyframes music-animation {
+  from { background-position: 0px; }
+  to { background-position: -2048px; }
+}
+
+.music:hover {
+  background: url('../images/planet431.png');
+}
+
 .content {
-  display: flex;
-}
-
-.text {
   position: relative;
+  background-color: rgba(245, 245, 245, 0.9);
+  width:40%;
+  height: 40%;
+  border: #C92464FF solid 2px;
+  border-radius: 1em;
+  border-bottom-width: 6px;
+  border-right-width: 6px;
   margin: auto;
-  margin-top: 3%;
-  width: 30%;
-  height: 60vh;
+  margin-top: 5vh;
   padding: 10px;
-  color: whitesmoke;
-  background-color: #1f1b31a3;
-  border: whitesmoke 2px dashed;
-  border-radius: 10px;
-}
-.text p {
-  color: whitesmoke;
 }
 
-.left {
-  float:left
+.content .line-break {
+  height: 0px;
+  width: 100%;
+  border: #C92464FF dashed 1px
 }
 
-.right {
-  float:right
+.content h2 {
+  color: #C92464FF;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
+.content p {
+  color: black;
+}
 

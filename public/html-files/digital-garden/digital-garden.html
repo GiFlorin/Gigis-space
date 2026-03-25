@@ -11,12 +11,12 @@
         <div class="window">
             <div class="window-header">
                 <span><div class="tab selected">Home</div></span>
-                <span><a href='digital-garden-literature.html'><div class="tab">Books</div></a></span>
-                <span><a href='digital-garden-game-dev.html'><div class="tab">Game development</div></a></span>
+                <span><a href='digital-garden-literature.html'><div class="tab">Literature</div></a></span>
+                <span><a href='digital-garden-astronomy.html'><div class="tab">Astronomy</div></a></span>
                 <span><a href='digital-garden-music.html'><div class="tab">Music</div></a></span>
-                <span><a href='digital-garden-art.html'><div class="tab">Art</div></a></span>
-                <span><a href='digital-garden-photography.html'><div class="tab">Photography</div></a></span>
-                <span><a href='digital-garden-cs.html'><div class="tab">Computer Science</div></a></span>
+                <span><a href='digital-garden-sketchbook.html'><div class="tab">Sketchbook</div></a></span>
+                <span><a href='digital-garden-tv.html'><div class="tab">TV</div></a></span>
+                <span><a href='digital-garden-cs-gd.html'><div class="tab">CS / Game dev</div></a></span>
                 <span><a href='digiatl-garden-creations'><div class="tab">Making Things</div></a></span>
             </div>
             <div class="window-content">
@@ -24,9 +24,49 @@
                 <br>
                 <p>This is my digital garden where i write about things i find interesting!</p>
                 <br>
-                <h3>New additions</h3>
-                <p>If you want to see what i have been doing recently, check out the new digital garden posts!</p>
+                <div class="wrapper" style="display:flex; flex-direction: row;">
+                    <div class="right" style="float:right;">
+                        <h3>Related</h3>
+                        <p>You can also visit other pages that are related to my digital garden!</p>
+                        <div class="box">
+                            <ul>
+                                <li><a href="../../archive/photos-2025.html">Photography</a></li>
+                                <li><a href="../projects.html">Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="left" style="float:left;">
+                        <h3>New additions</h3>
+                        <p>If you want to see what i have been doing recently, check out the new digital garden posts!</p>
+                        <div class="box">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+    <style>
+        .box{
+            background-color: whitesmoke;
+            width: 70%;
+            padding: 0.5em;
+            color: #cb4d68;
+            margin:auto;
+            border: #cb4d68 solid 2px;
+            border-right-width: 6px;
+            border-bottom-width: 6px;
+            box-shadow: 0px 0px 10px #1f1b314c;
+            height:20vh;
+            width: 15vw;
+        }
+        .box ul{
+            width:fit-content;
+            list-style: symbols("✪");
+            list-style-type:symbols("✪");
+        }
+        .box li{
+            padding: 0.5em;
+        }
+    </style>
 </html>
