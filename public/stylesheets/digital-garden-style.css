@@ -15,7 +15,7 @@ body {
   background-color: #393457FF;
   text-align: center;
   color: #dcd2bd;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Google Sans Code';
   overflow-y: hidden;
 }
 
@@ -58,7 +58,7 @@ a {
 
 .window {
   color: #cb4d68;
-  width: 70%;
+  width: 80%;
   height: 100%;
   margin:auto;
   margin-top: 3em;
@@ -111,16 +111,15 @@ a {
   padding: 1em;
   overflow-y: scroll;
   scrollbar-width: thin;
-  height:70%;
+  height:78%;
   text-align: center;
 }
 
 .window-content p {
   margin:auto;
-  width:70%;
+  width:80%;
   text-align: justify;
   text-indent: 50px;
-  letter-spacing: 1.3px;
   line-height: 1.5;
   padding: 1em;
 }
