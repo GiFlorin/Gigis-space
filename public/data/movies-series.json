@@ -1,0 +1,22 @@
+[
+    {
+        "title": "The Matrix",
+        "year-released": 1999,
+        "poster-url": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        "letterboxd-url": "https://letterboxd.com/film/the-matrix/",
+        "rating": 8.7,
+        "genres": ["Action", "Adventure", "Sci-Fi"],
+        "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war being waged against him by others he can't understand.",
+        "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
+        "director": "Lana Wachowski, Lilly Wachowski",
+        "duration": 136,
+        "date-watched": "2023-04-25",
+        "watched": true,
+        "series" :{
+            "name": "", 
+            "number": 1, 
+            "total": 7
+        }, 
+        "review":""
+    }
+]
